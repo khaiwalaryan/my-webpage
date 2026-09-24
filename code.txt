@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f6fc;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1d4ed8;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 18px;
+            margin-bottom: 8px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .rating {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .rating label {
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .rating input {
+            width: auto;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 13px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .required {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Feedback Form</h1>
+
+        <p class="description">
+            Please share your feedback to help us improve your learning experience.
+        </p>
+
+        <form>
+
+            <label for="name">
+                Student Name <span class="required">*</span>
+            </label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+            >
+
+            <label for="email">
+                Email <span class="required">*</span>
+            </label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label for="course">
+                Course / Department
+            </label>
+            <input
+                type="text"
+                id="course"
+                name="course"
+                placeholder="e.g. Computer Science"
+            >
+
+            <label for="semester">
+                Semester
+            </label>
+
+            <select id="semester" name="semester">
+                <option value="">Select Semester</option>
+                <option value="1">1st Semester</option>
+                <option value="2">2nd Semester</option>
+                <option value="3">3rd Semester</option>
+                <option value="4">4th Semester</option>
+                <option value="5">5th Semester</option>
+                <option value="6">6th Semester</option>
+                <option value="7">7th Semester</option>
+                <option value="8">8th Semester</option>
+            </select>
+
+            <label>
+                How would you rate the course?
+            </label>
+
+            <div class="rating">
+                <label>
+                    <input type="radio" name="rating" value="1">
+                    1
+                </label>
+
+                <label>
+                    <input type="radio" name="rating" value="2">
+                    2
+                </label>
+
+                <label>
+                    <input type="radio" name="rating" value="3">
+                    3
+                </label>
+
+                <label>
+                    <input type="radio" name="rating" value="4">
+                    4
+                </label>
+
+                <label>
+                    <input type="radio" name="rating" value="5">
+                    5
+                </label>
+            </div>
+
+            <label for="teacher">
+                How would you rate the teaching?
+            </label>
+
+            <select id="teacher" name="teacher">
+                <option value="">Select rating</option>
+                <option value="excellent">Excellent</option>
+                <option value="good">Good</option>
+                <option value="average">Average</option>
+                <option value="poor">Poor</option>
+            </select>
+
+            <label for="improve">
+                What can we improve?
+            </label>
+
+            <textarea
+                id="improve"
+                name="improve"
+                placeholder="Write your suggestions..."
+            ></textarea>
+
+            <label for="comments">
+                Additional Comments
+            </label>
+
+            <textarea
+                id="comments"
+                name="comments"
+                placeholder="Enter your feedback..."
+            ></textarea>
+
+            <button type="submit">
+                Submit Feedback
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
